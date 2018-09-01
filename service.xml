@@ -1,0 +1,227 @@
+<interfaces>
+<interface funcno="03">
+<request>
+<field name="func_no" len="2" precision="0" type="string"></field>
+</request>
+
+<resp_head>
+<field name="succ_flag" len="1" precision="0" type="string">0</field>
+<field name="err_code" len="4" precision="0" type="string">0000</field>
+<field name="err_msg" len="46" precision="0" type="string"></field>
+<field name="reserve" len="40" precision="0" type="string"></field>
+</resp_head>
+<resp_body>
+<field name="cp_confirm_flag" len="1" precision="0" type="string">2</field>
+<field name="cp_err_code" len="3" precision="0" type="string"></field>
+<field name="other_serial_no" len="24" precision="0" type="string"></field>
+<field name="transfer_fee" len="8" precision="2" type="float"></field>
+<field name="request_date" len="8" precision="0" type="string"></field>
+<field name="wy_error_code" len="8" precision="0" type="string"></field>
+<field name="fail_type" len="1" precision="0" type="string"></field>
+<field name="reserve" len="15" precision="0" type="string"></field>
+</resp_body>
+</interface>
+
+<interface funcno="04">
+<request>
+<field name="func_no" len="2" precision="0" type="string"></field>
+<field name="trust" len="1" precision="0" type="string"></field>
+</request>
+
+<resp_head>
+<field name="succ_flag" len="1" precision="0" type="string">1</field>
+<field name="err_code" len="4" precision="0" type="string">8888</field>
+<field name="err_msg" len="46" precision="0" type="string">返回失败结果再测试几个字</field>
+<field name="reserve" len="40" precision="0" type="string"></field>
+</resp_head>
+<resp_body>
+<field name="kk_state" len="1" precision="0" type="string">0</field>
+<field name="cp_err_code" len="8" precision="0" type="string"></field>
+<field name="other_serial_no" len="24" precision="0" type="string"></field>
+<field name="cp_pay_time" len="14" precision="0" type="string"></field>
+<field name="reserve" len="40" precision="0" type="string"></field>
+</resp_body>
+</interface>
+
+<interface funcno="08">
+<resp_head>
+<field name="succ_flag" len="1" precision="0" type="string">0</field>
+<field name="err_code" len="4" precision="0" type="string">0000</field>
+<field name="err_msg" len="46" precision="0" type="string"></field>
+<field name="reserve" len="40" precision="0" type="string"></field>
+</resp_head>
+<resp_body>
+<field name="cp_confirm_flag" len="1" precision="0" type="string"></field>
+<field name="reserve" len="40" precision="0" type="string"></field>
+</resp_body>
+</interface>
+
+<interface funcno="0C">
+<resp_head>
+<field name="succ_flag" len="1" precision="0" type="string">0</field>
+<field name="err_code" len="4" precision="0" type="string">0000</field>
+<field name="err_msg" len="46" precision="0" type="string"></field>
+<field name="reserve" len="40" precision="0" type="string"></field>
+</resp_head>
+<resp_body>
+<field name="reserve" len="40" precision="0" type="string"></field>
+</resp_body>
+</interface>
+
+<interface funcno="0A">
+<resp_head>
+<field name="succ_flag" len="1" precision="0" type="string">0</field>
+<field name="err_code" len="4" precision="0" type="string">0000</field>
+<field name="err_msg" len="86" precision="0" type="string">20180815|20180814</field>
+<field name="total_num" len="8" precision="0" type="int">0</field>
+<field name="return_num" len="8" precision="0" type="int">0</field>
+</resp_head>
+<resp_body>
+<field name="busin_type" len="1" precision="0" type="string"></field>
+<field name="fund_serial_no" len="24" precision="0" type="string"></field>
+<field name="bank_serial_no" len="24" precision="0" type="string"></field>
+<field name="bank_date" len="8" precision="0" type="string"></field>
+<field name="bank_time" len="6" precision="0" type="string"></field>
+<field name="req_date" len="8" precision="0" type="string"></field>
+<field name="order_status" len="20" precision="0" type="string"></field>
+<field name="occur_bala" len="16" precision="2" type="float"></field>
+<field name="bank_acco" len="28" precision="0" type="string"></field>
+<field name="explain" len="100" precision="0" type="string"></field>
+<field name="reserve" len="4" precision="0" type="string"></field>
+</resp_body>
+</interface>
+
+<interface funcno="0J">
+<resp_head>
+<field name="succ_flag" len="1" precision="0" type="string">0</field>
+<field name="err_code" len="4" precision="0" type="string">0000</field>
+<field name="err_msg" len="46" precision="0" type="string"></field>
+<field name="total_num" len="8" precision="0" type="int">0</field>
+<field name="return_num" len="8" precision="0" type="int">0</field>
+<field name="reserve" len="40" precision="0" type="string"></field>
+</resp_head>
+<resp_body>
+<field name="acco_id" len="3" precision="0" type="string"></field>
+<field name="other_serial_no" len="60" precision="0" type="string"></field>
+<field name="direct" len="1" precision="0" type="string"></field>
+<field name="name_in_bank" len="120" precision="0" type="string"></field>
+<field name="bank_name" len="30" precision="0" type="string"></field>
+<field name="bank_acco" len="28" precision="0" type="string"></field>
+<field name="home_name_in_bank" len="120" precision="0" type="string"></field>
+<field name="home_bank_acco" len="28" precision="0" type="string"></field>
+<field name="occur_bala" len="16" precision="2" type="float"></field>
+<field name="occur_date" len="8" precision="0" type="string"></field>
+<field name="occur_time" len="6" precision="0" type="string"></field>
+<field name="summary" len="60" precision="0" type="string"></field>
+<field name="usage" len="60" precision="0" type="string"></field>
+<field name="post_script" len="100" precision="0" type="string"></field>
+<field name="money_type" len="3" precision="0" type="string"></field>
+<field name="reserve" len="197" precision="0" type="string"></field>
+</resp_body>
+</interface>
+
+<interface funcno="0K">
+<resp_head>
+<field name="succ_flag" len="1" precision="0" type="string">0</field>
+<field name="err_code" len="4" precision="0" type="string">0000</field>
+<field name="err_msg" len="46" precision="0" type="string"></field>
+<field name="total_num" len="8" precision="0" type="int">0</field>
+<field name="return_num" len="8" precision="0" type="int">0</field>
+<field name="reserve" len="40" precision="0" type="string"></field>
+</resp_head>
+<resp_body>
+<field name="trade_acco" len="17" precision="0" type="string"></field>
+<field name="sign_no" len="40" precision="0" type="string"></field>
+<field name="bank_balance" len="16" precision="2" type="float"></field>
+<field name="fund_code" len="6" precision="0" type="string"></field>
+<field name="third_request_no" len="40" precision="0" type="string"></field>
+<field name="capital_source" len="1" precision="0" type="string"></field>
+<field name="request_bala" len="16" precision="2" type="float"></field>
+<field name="custom_name" len="120" precision="0" type="string"></field>
+<field name="identity_type" len="1" precision="0" type="string"></field>
+<field name="identity_no" len="30" precision="0" type="string"></field>
+<field name="name_in_bank" len="60" precision="0" type="string"></field>
+<field name="bank_name" len="60" precision="0" type="string"></field>
+<field name="bank_acco" len="28" precision="0" type="string"></field>
+<field name="trade_type" len="4" precision="0" type="string"></field>
+<field name="reserve" len="100" precision="0" type="string"></field>
+</resp_body>
+</interface>
+
+<interface funcno="0L">
+<resp_head>
+<field name="succ_flag" len="1" precision="0" type="string">0</field>
+<field name="err_code" len="4" precision="0" type="string">0000</field>
+<field name="err_msg" len="46" precision="0" type="string"></field>
+<field name="reserve" len="40" precision="0" type="string"></field>
+</resp_head>
+<resp_body>
+<field name="reserve" len="40" precision="0" type="string"></field>
+</resp_body>
+</interface>
+
+<interface funcno="0M">
+<resp_head>
+<field name="succ_flag" len="1" precision="0" type="string">0</field>
+<field name="err_code" len="4" precision="0" type="string">0000</field>
+<field name="err_msg" len="46" precision="0" type="string"></field>
+<field name="reserve" len="40" precision="0" type="string"></field>
+</resp_head>
+<resp_body>
+<field name="download_state" len="1" precision="0" type="string">0</field>
+<field name="request_date" len="8" precision="0" type="string">20180726</field>
+<field name="sub_dir" len="30" precision="0" type="string"></field>
+<field name="file_name" len="128" precision="0" type="string"></field>
+<field name="md5_code" len="128" precision="0" type="string"></field>
+<field name="reserve" len="40" precision="0" type="string"></field>
+</resp_body>
+</interface>
+
+<interface funcno="0P">
+<resp_head>
+<field name="succ_flag" len="1" precision="0" type="string">0</field>
+<field name="err_code" len="4" precision="0" type="string">0000</field>
+<field name="err_msg" len="46" precision="0" type="string"></field>
+<field name="reserve" len="40" precision="0" type="string"></field>
+</resp_head>
+<resp_body>
+<field name="download_state" len="1" precision="0" type="string">0</field>
+<field name="request_date" len="8" precision="0" type="string">20180726</field>
+<field name="sub_dir" len="30" precision="0" type="string"></field>
+<field name="file_name" len="128" precision="0" type="string"></field>
+<field name="md5_code" len="128" precision="0" type="string"></field>
+<field name="reserve" len="40" precision="0" type="string"></field>
+</resp_body>
+</interface>
+
+<interface funcno="0T">
+<resp_head>
+<field name="succ_flag" len="1" precision="0" type="string">0</field>
+<field name="err_code" len="4" precision="0" type="string">0000</field>
+<field name="err_msg" len="46" precision="0" type="string"></field>
+<field name="reserve" len="40" precision="0" type="string"></field>
+</resp_head>
+<resp_body>
+<field name="unsign_result" len="1" precision="0" type="string"></field>
+<field name="busin_err_code" len="8" precision="0" type="string"></field>
+<field name="busin_err_msg" len="256" precision="0" type="string"></field>
+<field name="reserve" len="40" precision="0" type="string"></field>
+</resp_body>
+</interface>
+
+<interface funcno="0U">
+<resp_head>
+<field name="succ_flag" len="1" precision="0" type="string">0</field>
+<field name="err_code" len="4" precision="0" type="string">0000</field>
+<field name="err_msg" len="46" precision="0" type="string"></field>
+<field name="reserve" len="40" precision="0" type="string"></field>
+</resp_head>
+<resp_body>
+<field name="cp_confirm_flag" len="1" precision="0" type="string"></field>
+<field name="wy_error_code" len="8" precision="0" type="string"></field>
+<field name="explain" len="100" precision="0" type="string"></field>
+<field name="reserve" len="40" precision="0" type="string"></field>
+</resp_body>
+</interface>
+
+</interfaces>

@@ -1,0 +1,20 @@
+#本配置文件支持热加载
+#pkt_charset: 通讯报文的字符编码 GBK 或 UTF8
+#direct_resp_funcno: 基于service.xml接口配置文件中的预设值直接返回的功能号列表
+#file_resp_funcno: 基于特定数据文件返回响应报文体的功能号列表
+#0A_file: 0A接口返回报文体的数据来源，不允许修改
+#0K_file: 0K接口返回报文体的数据来源，不允许修改
+#0J_file: 0J接口返回报文体的数据来源，不允许修改
+#check_md5: 是否需要进行MD5签名，Y-是;N-否
+#md5_salt: MD5签名使用的盐值
+
+{
+"pkt_charset" : "GBK",
+"direct_resp_funcno" : "|03|04|08|09|0B|0D|0E|0F|0M|0P|0L|0N|0S|0T|0U|0C|",
+"file_resp_funcno" : "|0A|0J|0K|",
+"0A_file" : "0A_file.txt", 
+"0K_file" : "0K_file.txt", 
+"0J_file" : "0J_file.txt",
+"check_md5" : "Y", 
+"md5_salt" : "2222222222"
+}
