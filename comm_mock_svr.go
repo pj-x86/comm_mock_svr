@@ -200,8 +200,8 @@ func handleConn(c net.Conn) {
 		return
 	}
 
-	var serviceXmlFile = "service.xml"
-	err = myutil.ReadInterfaces(serviceXmlFile)
+	var serviceXMLFile = "service.xml"
+	err = myutil.ReadInterfaces(serviceXMLFile)
 	if err != nil {
 		log.Printf("读入接口列表到内存失败\n")
 		respmsg := genErrRespMsg("9999", "服务端内部异常", config)
@@ -252,7 +252,7 @@ func handleConn(c net.Conn) {
 				c.Write(respmsg)
 
 			} else {
-				log.Printf("客户端关闭连接，结束", errRead.Error())
+				log.Printf("客户端关闭连接，结束")
 			}
 
 			return

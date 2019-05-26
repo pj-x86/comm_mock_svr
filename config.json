@@ -9,7 +9,7 @@
 #md5_salt: MD5签名使用的盐值
 
 {
-"pkt_charset" : "GBK",
+"pkt_charset" : "UTF8",
 "direct_resp_funcno" : "|03|04|08|09|0B|0D|0E|0F|0M|0P|0L|0N|0S|0T|0U|0C|",
 "file_resp_funcno" : "|0A|0J|0K|",
 "0A_file" : "0A_file.txt", 
