@@ -1,0 +1,19 @@
+# First stage: complete build environment
+FROM golang AS builder
+WORKDIR /go/src
+COPY ./ comm_mock_svr/
+WORKDIR /go/src/comm_mock_svr
+#RUN go get -d -v golang.org/x/crypto/ssh github.com/pkg/sftp github.com/kr/fs \
+#	github.com/pkg/errors golang.org/x/text golang.org/x/text/transform
+RUN go get -d -v ./...
+RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o comm_mock_svr .
+
+# Second stage: minimal runtime environment
+FROM scratch AS prod
+LABEL maintainer "pj-x86(pj81102@163.com)"
+COPY --from=builder /go/src/comm_mock_svr .
+COPY --from=builder /go/src/comm_mock_svr/config.json .
+COPY --from=builder /go/src/comm_mock_svr/service.xml .
+
+EXPOSE 6610
+ENTRYPOINT [ "./comm_mock_svr", "-output", "console"]
